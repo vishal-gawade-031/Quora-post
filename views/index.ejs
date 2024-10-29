@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cora web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quora Posts</h1>
+    <div class="postess">
+    <% for(post of posts){ %>
+        <h3><div class="user"></div>@<%= post.username %></h3>
+        <% if(post.superuser){%>
+        <h3>only one super user</h3>
+        <% } %>
+         
+       <P> <h4>followers <%= post.followers %> </h4><h4>following <%= post.following %></h4></P>
+        <h3><div class="content"></div><%= post.contant %></h3>
+   <br>
+    <a href="http://localhost:8080/post/<%= post.id %>">go to post</a>
+    <a href="http://localhost:8080/post/<%= post.id %>/edit">Edit post</a>
+        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button>delete</button>
+        </form>
+        <%}%>
+        <a href="http://localhost:8080/post/larva">fill the form</a>
+      <br>  <a href="http://localhost:8080/posts/new">creat new post</a>
+    </div>
+
+</body>
+</html>

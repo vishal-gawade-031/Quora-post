@@ -1,0 +1,22 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+} */
+h1{
+    color: mediumaquamarine;
+}
+body{
+    background-color: rgb(216, 231, 236);
+}
+.user{
+    font-style: italic;
+background-color:rgb(55, 250, 188);
+}
+.contant{
+    color: green;
+}
